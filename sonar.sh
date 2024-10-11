@@ -11,3 +11,8 @@ sudo yum install sonar -y
 
 # Start the service
 service sonar start
+
+### Sonarqube command for to check code coverage for maven
+mvn sonar:sonar \
+    -Dsonar.host.url=http://65.0.179.34:9000 \
+    -Dsonar.login=9ae5023958a9a2eda6d0387949344df8da191944
