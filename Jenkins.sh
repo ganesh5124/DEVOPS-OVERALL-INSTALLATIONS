@@ -27,6 +27,37 @@ sudo systemctl status jenkins
 sudo systemctl enable jenkins
 
 
+##### Jenkins installation in Amazon Linux
+
+#!/bin/bash
+# update yum 
+sudo yum update –y
+
+# used to add jenkins repo in yum 
+sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+# Import rm key 
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+# update yum 
+sudo yum upgrade
+
+# Install java for jenkins (prerequisite)
+sudo dnf install java-17-amazon-corretto -y
+
+# Install jenkins
+sudo yum install jenkins -y
+
+# Enable jenkins 
+sudo systemctl enable jenkins
+
+# Check jenkins status
+sudo systemctl status jenkins
+
+# start the jenkins
+sudo systemctl start jenkins
+
 
 
 
