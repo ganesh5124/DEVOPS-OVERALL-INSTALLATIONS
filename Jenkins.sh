@@ -1,11 +1,9 @@
 ########.      Step 1: Install Java on Ubuntu
 sudo apt update
-sudo apt sudo apt install openjdk-8-jdk
-#  Alternatively, install version 11:
+# install JDK version 11:
 sudo apt install openjdk-11-jdk -y
 
 # Step 2: Add the repository key to the system:
-
 sudo apt wget -q -O - https://pkg.jenkins.io/debianstable/jenkins.io.key | sudo apt-key add -
 
 # Step 3: Once the key is added with no errors, append the Debian package repository address
